@@ -7,33 +7,485 @@
   <title>Praktikum SIDJA | Angga Nuriman</title>
 </head>
 
-<body>
-  <h2>Repository Praktikum</h2>
-   <br>Menu Praktikum<a href="https://angganuriman904-coder.github.io/praktikum/">
-        Kembali ke Website Praktikum
-    </a>
+  <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<br>Biodata<br>
-  <!--Tab to edit-->
-</br>
-<table>
-  <tr>
-    <td>Nama</td>
-    <td>:</td>
-    <td>Angga Nuriman</td>
-  </tr>
-  <tr>
-    <td>Kelas</td>
-    <td>:</td>
-    <td>XI TJKT 2</td>
-  </tr>
-  <tr>
-    <td>Tempat/tanggal lahir</td>
-    <td>:</td>
-    <td>Majalengka, 12 November 2009</td>
-  </tr>
-  <tr>
-    <td>Alamat</td>
-    <td>:</td>
-    <td>desa.ParungJaya kec.Leuwimunding kab.Majalengka</td>
-  </tr>
+<title>Profil Angga Nuriman</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0f4fa;
+    color: #172033;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* PROFIL */
+
+.profile {
+    text-align: center;
+    padding: 45px 25px;
+}
+
+.profile img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
+    border: 7px solid #dce8ff;
+    margin-bottom: 25px;
+}
+
+.profile h1 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.profile p {
+    color: #4777c9;
+    font-size: 23px;
+}
+
+/* NAVIGASI */
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 40px 0;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #273247;
+    background: #f0f4f9;
+    padding: 13px 22px;
+    border-radius: 17px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu .active {
+    background: #2863e9;
+    color: white;
+}
+
+/* JUDUL */
+
+.judul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.icon {
+    background: #eef4ff;
+    color: #2863e9;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 27px;
+}
+
+/* BIODATA */
+
+.item {
+    background: #f7f9fc;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.item span {
+    display: block;
+    color: #7b8798;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.item strong {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* PENDIDIKAN */
+
+.pendidikan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.tanggal {
+    background: #eaf1ff;
+    color: #4777c9;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.deskripsi {
+    color: #687587;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* ORGANISASI */
+
+.organisasi {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* KEAHLIAN */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills span {
+    background: #eef4ff;
+    color: #315eae;
+    padding: 12px 18px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+/* HOBI */
+
+.hobi {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.hobi div {
+    background: #f7f9fc;
+    padding: 35px 15px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 21px;
+}
+
+.hobi b {
+    display: block;
+    color: #2863e9;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* REPOSITORY */
+
+.repo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f9fc;
+    padding: 25px;
+    border: 1px solid #e5e8ef;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #273247;
+}
+
+.repo small {
+    display: block;
+    color: #7b8798;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    color: #8993a3;
+    padding: 20px;
+}
+
+/* RESPONSIVE HP */
+
+@media(max-width:600px) {
+
+    .card {
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    .profile img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .profile h1 {
+        font-size: 29px;
+    }
+
+    .profile p {
+        font-size: 18px;
+    }
+
+    .judul {
+        font-size: 21px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 12px 17px;
+    }
+
+    .pendidikan {
+        align-items: flex-start;
+    }
+
+    .tanggal {
+        font-size: 14px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PROFIL UTAMA -->
+
+ <section class="card profile">
+
+<img src="angga.jpg" alt="Foto Angga Nuriman">
+
+<h1>Angga Nuriman</h1>
+
+<h1>Angga Nuriman</h1>
+
+<p>Siswa SMKN 1 Leuwimunding</p>
+
+<hr>
+
+<div class="menu">
+<a href="#biodata">Biodata</a>
+<a href="#pendidikan">Pendidikan</a>
+<a href="#organisasi">Organisasi</a>
+<a href="#keahlian">Keahlian</a>
+<a href="#hobi">Hobi</a>
+ <a href="#repository" class="active">Repository</a>
+</div>
+
+</section>
+
+<!-- BIODATA -->
+
+<section class="card" id="biodata">
+
+<h2 class="judul">
+<span class="icon">👤</span>
+Biodata Lengkap
+</h2>
+
+<div class="item">
+<span>Nama Lengkap</span>
+<strong>Angga Nuriman</strong>
+</div>
+
+<div class="item">
+<span>Tempat, Tanggal Lahir</span>
+<strong>Majalengka, 12 November 2009</strong>
+</div>
+
+<div class="item">
+<span>Jenis Kelamin</span>
+<strong>Laki-Laki</strong>
+</div>
+
+<div class="item">
+<span>Agama</span>
+<strong>Islam</strong>
+</div>
+
+<div class="item">
+<span>Status Dalam Keluarga</span>
+<strong>Anak Kandung</strong>
+</div>
+
+<div class="item">
+<span>Anak Ke</span>
+<strong>1</strong>
+</div>
+
+<div class="item">
+<span>Alamat</span>
+<strong>Desa Parungjaya, Kecamatan Leuwimunding, Majalengka</strong>
+</div>
+
+<div class="item">
+<span>Asal Sekolah</span>
+<strong>SMP Negeri 3 Leuwimunding</strong>
+</div>
+
+<div class="item">
+<span>Sekolah Sekarang</span>
+<strong>SMK Negeri 1 Leuwimunding</strong>
+</div>
+
+<div class="item">
+<span>Kelas / Jurusan</span>
+<strong>XI TJKT 2</strong>
+</div>
+
+</section>
+
+<!-- PENDIDIKAN -->
+
+<section class="card" id="pendidikan">
+
+<h2 class="judul">
+<span class="icon">🎓</span>
+Riwayat Pendidikan
+</h2>
+
+<div class="item pendidikan">
+<div>
+<strong>SMK Negeri 1 Leuwimunding</strong>
+<p class="deskripsi">Sekolah Menengah Kejuruan</p>
+</div>
+<div class="tanggal">2025 - Sekarang</div>
+</div>
+
+<div class="item pendidikan">
+<div>
+<strong>SMP Negeri 3 Leuwimunding</strong>
+<p class="deskripsi">Sekolah Menengah Pertama</p>
+</div>
+<div class="tanggal">2022 - 2025</div>
+</div>
+
+<div class="item pendidikan">
+<div>
+<strong>SD Negeri Leuwimunding 3</strong>
+<p class="deskripsi">Sekolah Dasar</p>
+</div>
+<div class="tanggal">2016 - 2022</div>
+</div>
+
+</section>
+
+
+<!-- KEAHLIAN -->
+
+<section class="card" id="keahlian">
+
+<h2 class="judul">
+<span class="icon">💻</span>
+Keahlian
+</h2>
+
+<div class="skills">
+<span>HTML & CSS</span>
+<span>Mikrotik PNETLab</span>
+<span>Git & GitHub</span>
+<span>Networking Dasar</span>
+<span>Termux (Debian)</span>
+</div>
+
+</section>
+
+<!-- HOBI -->
+
+<section class="card" id="hobi">
+
+<h2 class="judul">
+<span class="icon">💙</span>
+Hobi & Minat
+</h2>
+
+<div class="hobi">
+
+<div>
+<b>🎮</b>
+Gaming
+</div>
+
+<div>
+<b>📷</b>
+Photography
+</div>
+
+<div>
+<b>🖌️</b>
+Menggambar
+</div>
+
+</div>
+
+</section>
+
+<!-- REPOSITORY -->
+
+<section class="card" id="repository">
+
+<h2 class="judul">
+<span class="icon">📂</span>
+Menu Repository Praktikum
+</h2>
+
+ <a href="https://angganuriman904-coder.github.io/praktikum/" class="repo">
+
+<div>
+<strong>🐙 Repository Praktikum</strong>
+<small>Kumpulan tugas dan modul praktikum</small>
+</div>
+
+<span>↗</span>
+
+</a>
+
+</section>
+
+<footer>
+© 2026 Angga Nuriman
+</footer>
+
+</div>
+
+</body>
+</html>
